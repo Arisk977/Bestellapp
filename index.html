@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bestellapp</title>
+    <link rel="icon" type="image/x-icon" href="./img/Favicon/favicon-16x16.png">
+    <link rel="stylesheet" href="./styles/standard.css">
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="scripts/db.js"></script>
+    <script src="scripts/templates.js"></script>
+    <script src="script.js"></script>
+
+</head>
+
+<body onload="init()">
+    <header>
+        <a href="./index.html"><img src="./img/Logo/Bestell App- Logo.svg" alt="" ></a>
+        <nav>
+            <a onclick="toggleCart()" id="shopping-cart">Warenkorb</a>
+        </nav>
+    </header>
+
+    <main id="main" class="main-overflow">
+        <section id="content">
+
+            <section id="background-head">
+                <img src="./img/Logo.png">
+                <div class="menu">
+                    <h2>Zum Schwarzen Roß - Pizzeria Picco Bello</h2>
+                    <span>Bewertung (4,3 von 5 Sternen)</span>
+                    <div class="food-classes">
+                        <div class="navbar"> <a href="#starter-category">Vorspeisen</a></div>
+                        <div class="navbar"> <a href="#pizzen-category">Hauptspeisen</a></div>
+                        <div class="navbar"> <a href="#dessert-category">Nachtisch</a></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="products">
+                <h2 id="starter-category">Vorspeisen</h2>
+                <img src="./img/oily-58745_1920.jpg" class="img-category">
+                <div id="starter">
+                </div>
+                <h2 id="pizzen-category">Pizzen</h2>
+                <img src="./img/ai-generated-8775471_1920.jpg" class="img-category">
+                <div id="Pizzen"></div>
+                </div>
+                <h2 id="dessert-category">Nachtisch</h2>
+                <img src="./img/tiramisu.jpg" class="img-category">
+                <div id="dessert"></div>
+                </div>
+            </section>
+        </section>
+
+
+        <section id="cart" class="toggle">
+            <div id="cart-content">
+                <h2>Warenkorb</h2>
+                <hr>
+                <div>
+                    <div id="order">
+                    </div>
+                </div>
+                <hr>
+                <div id="order-endprice">
+                </div>
+                <div id="button">
+                </div>
+        </section>
+        <div id="order-overlay" class="d_none">
+            <div id="overlay-container"> 
+                <h3>Ihre Bestellung wurde erfolgreich weitergeleitet und befindet sich nun in der Bearbeitung.
+                </h3>
+                <h4>Unsere Lieferzeiten betragen in der Regel 30 - 40 min</h4>
+                <button onclick="removeOverlay()">Einverstanden</button>
+            </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <a href="./contact.html">Kontakt</a>
+        <a href="#">Datenschutz</a>
+        <a href="#">Impressum</a>
+    </footer>
+
+</body>
+
+</html>
